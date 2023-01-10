@@ -1,0 +1,24 @@
+---
+export interface Props {
+    title?: string;
+}
+
+const { title = 'Frontend Mentor | Sunnyside agency landing page' } = Astro.props as Props; 
+---
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+  <!-- <link rel="icon" type="image/png" sizes="32x32" href="../../public/images/favicon-32x32.png"> -->
+  <!-- files in the public directory are served at the root path. Instead of /public/images/favicon-32x32.png, use /images/favicon-32x32.png. -->
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32.png">
+  <title>{title}</title>
+</head>
+<body>
+
+    <slot />
+
+</body>
+</html>
