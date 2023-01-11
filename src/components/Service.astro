@@ -1,0 +1,60 @@
+---
+export interface Props {
+    heading?: string;
+    text?: string;
+    classStyle?: string;
+}
+
+const { heading, text, classStyle } = Astro.props as Props;
+---
+
+<div class:list={["service", classStyle]}>
+<!-- <div class:list={["service", {classStyle}]}> -->
+    <h3>{heading}</h3>
+    <p>{text}</p>
+</div>
+<!-- <div class="service">
+    <h3>{heading}</h3>
+    <p>{text}</p>
+</div> -->
+
+<style>
+        /* section div img {
+        width: 100%;
+    } */
+
+    .service {
+        min-height: 80dvh;
+        /* position: relative; */
+        padding: 3rem 1.25rem;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-end;
+        text-align: center;
+        font-family: var(--barlow);
+        line-height: 1.5;
+        /* background-color: red; */
+        /* outline: 1px solid red; */
+        background-size: cover;
+        background-position: center;
+    }
+        .graphic-design {
+            color: var(--Dark-desaturated-cyan);
+            background-image: url('/images/mobile/image-graphic-design.jpg');
+        }
+        .photography {
+            color: var(--Dark-bluex);
+            background-image: url('/images/mobile/image-photography.jpg');
+        }
+
+    /* .text {
+        position: absolute;
+        padding: 0 1.5rem 4rem;
+        bottom: 0;
+    } */
+    .service h3 {
+        font-size: 1.75rem;
+        font-family: var(--fraunces);
+        margin-bottom: 1.75rem;
+    }
+</style>
