@@ -1,0 +1,43 @@
+---
+export interface Props {
+    img?: string;
+    text?: string;
+    name?: string;
+    title?: string;
+}
+
+const { img, text, name, title } = Astro.props as Props;
+---
+
+<div class="testimonial">
+    <img src={img} alt="Profile picture">
+    <p class="text">{text}</p>
+    <p class="name">{name}</p>
+    <p class="title">{title}</p>
+</div>
+
+<style>
+    .testimonial {
+        padding: 4rem 0 1rem;
+    }
+    .testimonial img {
+        width: 4.25rem;
+        border-radius: 50%;
+    }
+        .text {
+            margin: 2rem 0;
+            font-size: 1.1rem;
+            line-height: 1.75;
+            color: var(--Very-dark-grayish-blue);
+
+        }
+        .name {
+            font-family: var(--fraunces);
+            font-weight: 900;
+            color: var(--Very-dark-desaturated-blue);
+            margin-bottom: .5rem;
+        }
+        .title {
+            font-size: .9rem;
+        }
+</style>

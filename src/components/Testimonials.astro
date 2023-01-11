@@ -1,0 +1,42 @@
+---
+import Testimonial from './Testimonial.astro';
+---
+
+<section>
+    <h3>Client testimonials</h3>
+    <div class="testimonials">
+        <Testimonial
+            img="/images/image-emily.jpg"
+            text="We put our trust in Sunnyside and they delivered, making sure our needs were met and deadlines were always hit."
+            name="Emily R."
+            title="Marketing Director"
+        />
+        <Testimonial
+            img="/images/image-thomas.jpg"
+            text="Sunnyside’s enthusiasm coupled with their keen interest in our brand’s success made it a satisfying and enjoyable experience."
+            name="Thomas S."
+            title="Chief Operating Officer"
+        />
+        <Testimonial
+            img="/images/image-jennie.jpg"
+            text="Incredible end result! Our sales increased over 400% when we worked with Sunnyside. Highly recommended!"
+            name="Jennie F."
+            title="Business Owner"
+        />
+    </div>
+</section>
+
+<style>
+    section {
+        text-align: center;
+        background-color: var(--White);
+        padding: 3rem 2rem 5rem;
+        font-family: var(--barlow);
+        color: var(--Dark-grayish-blue);
+    }
+        section h3 {
+            font-family: var(--fraunces);
+            font-size: 1.5rem;
+            color: var(--Grayish-blue);
+        }
+</style>
