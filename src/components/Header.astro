@@ -1,16 +1,23 @@
+---
+import navData from '../data/navData';
+---
+
 <header>
     <div class="navbar">
         <img src="/images/logo.svg" alt="Company Logo">
     
         <nav>
             <ul>
-                <li><a href=""> About</a></li>
-                <li><a href=""> About</a></li>
-                <li><a href=""> About</a></li>
-                <li><a href=""> About</a></li>
+                {navData.map(link => (
+                    <li><a href={link.path}>{link.name}</a></li>
+                ))}
             </ul>
         </nav>
     </div>
+
+    <h1>We are creatives</h1>
+
+    <img src="/images/icon-arrow-down.svg" alt="Icon" class="arrow">
 </header>
 
 <style>
@@ -19,7 +26,6 @@
         background-image: url('/images/mobile/image-header.jpg');
         background-size: cover;
         background-position: center;
-        font-family: 'Barlow', sans-serif;
     }
 
     .navbar {
@@ -31,5 +37,25 @@
     nav ul {
         list-style: none;
         display: flex;
+        font-family: var(--barlow);
+    }
+    /* nav li {
+        margin-left: 1rem;
+    } */
+
+    h1 {
+        text-align: center;
+        margin-top: 5rem;
+        color: var(--White);
+        font-family: var(--fraunces);
+        text-transform: uppercase;
+        font-size: 2.5rem;
+        letter-spacing: 7px;
+        font-weight: 900;
+    }
+
+    .arrow {
+        display: block;
+        margin: 3rem auto;
     }
 </style>
