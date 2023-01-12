@@ -37,5 +37,21 @@ import Testimonial from './Testimonial.astro';
             font-family: var(--fraunces);
             font-size: 1.5rem;
             color: var(--Grayish-blue);
+            text-transform: uppercase;
+            letter-spacing: 5px;
         }
+
+    @media (min-width: 1440px)  {
+        section {
+            padding: 7rem;
+        }
+
+        .testimonials {
+            display: flex;
+            gap: 2rem;
+        }
+        section h3 {
+            font-size: 1.15rem;
+        }
+    }
 </style>

@@ -3,12 +3,25 @@ import galleryImages from '../data/galleryImages';
 ---
 
 <section>
-    {galleryImages.map(img => (
+    <!-- {galleryImages.map(img => (
         <img src={img} alt="Gallery Picture">
+    ))} -->
+
+    {galleryImages.map(img => (
+        <picture>
+            <source srcset={img.desk} media="(min-width: 1440px)">
+            <img src={img.mob} alt="Gallery picture">
+        </picture>
     ))}
+    
 </section>
 
 <style>
+    picture img {
+        width: 100%;
+        height: 100%;
+    }
+    
     section {
         display: grid;
         grid-template-columns: repeat(2, 1fr);
@@ -16,4 +29,11 @@ import galleryImages from '../data/galleryImages';
         section img {
             width: 100%;
         }
+
+    @media (min-width: 1440px) {
+        section {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+        }
+    }
 </style>

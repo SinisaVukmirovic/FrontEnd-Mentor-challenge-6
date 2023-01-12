@@ -40,4 +40,17 @@ const { heading, text, classStyle } = Astro.props as Props;
         font-family: var(--fraunces);
         margin-bottom: 1.75rem;
     }
+
+    @media (min-width: 1440px) {
+        .graphic-design {
+            background-image: url('/images/desktop/image-graphic-design.jpg');
+        }
+        .photography {
+            background-image: url('/images/desktop/image-photography.jpg');
+        }
+
+        .service p {
+            margin: 0 5rem;
+        }
+    }
 </style>

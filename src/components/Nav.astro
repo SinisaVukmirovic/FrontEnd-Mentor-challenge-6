@@ -19,18 +19,20 @@ import navData from '../data/navData';
         font-family: var(--barlow);
     }
 
-
-    /* STYLES FOR DESKTOP VERSION */
-        /* nav ul li {
-            margin-left: 1rem;
+    @media (min-width: 1440px) {
+        nav ul li {
+            margin-left: 3rem;
             color: var(--White);
-        } */
+        }
 
-    /* nav ul li:last-child {
-        background-color: var(--White);
-        padding: .5rem 1rem;
-        border-radius: 10rem;
-        color: var(--Very-dark-desaturated-blue);
-    } */
-    /* STYLES FOR DESKTOP VERSION */
+        nav ul li:last-child {
+            background-color: var(--White);
+            padding: .75rem 1.25rem;
+            border-radius: 10rem;
+            color: var(--Very-dark-desaturated-blue);
+            text-transform: uppercase;
+            font-size: .8rem;
+            font-family: var(--fraunces);
+        }
+    }
 </style>

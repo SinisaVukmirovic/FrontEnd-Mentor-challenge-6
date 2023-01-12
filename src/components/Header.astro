@@ -8,13 +8,6 @@ import Nav from './Nav.astro';
         <img src="/images/logo.svg" alt="Company Logo">
     
         <Nav />
-        <!-- <nav>
-            <ul>
-                {navData.map(link => (
-                    <li><a href={link.path}>{link.name}</a></li>
-                ))}
-            </ul>
-        </nav> -->
     </div>
 
     <h1>We are creatives</h1>
@@ -36,12 +29,6 @@ import Nav from './Nav.astro';
         justify-content: space-between;
     }
 
-    /* nav ul {
-        list-style: none;
-        display: flex;
-        font-family: var(--barlow);
-    } */
-
     h1 {
         text-align: center;
         margin-top: 5rem;
@@ -56,5 +43,25 @@ import Nav from './Nav.astro';
     .arrow {
         display: block;
         margin: 3rem auto;
+    }
+
+    @media (min-width: 1440px) {
+        header {
+            background-image: url('/images/desktop/image-header.jpg');
+        }
+
+        .navbar {
+            padding: 2rem;
+        }
+
+        .navbar img {
+            width: 8.5rem;
+            height: 1.75rem;
+        }
+
+        .arrow {
+            display: block;
+            margin: 6rem auto;
+        }
     }
 </style>

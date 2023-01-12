@@ -58,4 +58,23 @@ const { img, alt, heading, text } = Astro.props as Props;
         text-decoration: none;
         color: inherit;
     }
+
+    @media (min-width: 1440px) {
+        .feature {
+            all: unset;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+        }
+
+        .feature:first-child .img {
+            order: 2;
+        }
+
+        .info {
+            /* display: grid;
+            place-items: center; */
+            text-align: left;
+            padding: 7rem 5rem;
+        }
+    }
 </style>

@@ -39,5 +39,20 @@ const { img, text, name, title } = Astro.props as Props;
         }
         .title {
             font-size: .9rem;
+        }        
+
+    @media (min-width: 1440px)  {
+        .testimonial img {
+            width: 4rem;
         }
+        .text {
+            font-size: .9rem;
+        }
+        .name {
+            font-size: .9rem;
+        }
+        .title {
+            font-size: .8rem;
+        }    
+    }
 </style>
