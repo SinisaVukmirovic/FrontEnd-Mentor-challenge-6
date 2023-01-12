@@ -71,10 +71,30 @@ const { img, alt, heading, text } = Astro.props as Props;
         }
 
         .info {
-            /* display: grid;
-            place-items: center; */
             text-align: left;
-            padding: 7rem 5rem;
+            /* padding: 7rem 5rem; */
+            padding: 30% 20%;
         }
+            .info a {
+                text-transform: uppercase;
+                position: relative;
+                z-index: 1;
+            }
+            
+            .info a:hover::after {
+                content: '';
+                position: absolute;
+                z-index: -1;
+                bottom: -3px;
+                border-radius: 10px;
+                left: -10%;
+                width: 120%;
+                height: 15px;
+                background-color: var(--Soft-red);
+            }
+
+            .feature:first-child .info a:hover::after {
+                background-color: var(--Yellow);
+            }
     }
 </style>

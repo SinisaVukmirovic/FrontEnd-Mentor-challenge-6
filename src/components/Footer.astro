@@ -82,9 +82,9 @@ const footerLinks = [
         text-align: center;
         padding: 1rem;
         background-color: var(--Dark-moderate-cyan);
-        color: var(--footer-bg);
+        color: var(--Dark-blue);
     }
-    .attribution a { color: var(--Dark-blue); }
+    .attribution a { color: var(--footer-bg); }
 
     @media (min-width: 1440px) {
         .nav-links {
@@ -95,8 +95,15 @@ const footerLinks = [
             width: 1.1rem;
         }
 
-        .attribution { 
+        .attribution {  
             font-size: 1rem;
+        }
+
+        ul a:hover {
+            color: var(--White);
+        }
+        ul a:hover img {
+            filter: brightness(5);
         }
     }
 </style>
