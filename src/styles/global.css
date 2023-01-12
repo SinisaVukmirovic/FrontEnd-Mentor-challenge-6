@@ -30,3 +30,8 @@
 img {
     display: inline-block;
 }
+
+ul li, 
+a {
+    cursor: pointer;
+}

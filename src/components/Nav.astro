@@ -1,0 +1,36 @@
+---
+import navData from '../data/navData';
+---
+
+<nav>
+    <ul>
+        {navData.map(link => (
+            <li><a href={link.path}>{link.name}</a></li>
+        ))}
+    </ul>
+</nav>
+
+<style>
+
+    nav ul {
+        list-style: none;
+        display: flex;
+        align-items: center;
+        font-family: var(--barlow);
+    }
+
+
+    /* STYLES FOR DESKTOP VERSION */
+        /* nav ul li {
+            margin-left: 1rem;
+            color: var(--White);
+        } */
+
+    /* nav ul li:last-child {
+        background-color: var(--White);
+        padding: .5rem 1rem;
+        border-radius: 10rem;
+        color: var(--Very-dark-desaturated-blue);
+    } */
+    /* STYLES FOR DESKTOP VERSION */
+</style>

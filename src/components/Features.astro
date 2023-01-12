@@ -1,61 +1,19 @@
 ---
-export interface Props {
-    img?: string;
-    alt?: string;
-    heading?: string;
-    text?: string;
-}
-
-const { img, alt, heading, text } = Astro.props as Props;
+import Feature from './Feature.astro';
 ---
 
 <section>
-    <div class="img">
-        <img src={img} alt={alt}>
-    </div>
-    <div class="features">
-        <h2>{heading}</h2>
-        <p>{text}</p>
-        <a href="#" class="btn">Learn more</a>
-    </div>
+    <Feature 
+        img='/images/mobile/image-transform.jpg'
+        alt='Graphic image'
+        heading='Transform your brand' 
+        text='We are a full-service creative agency specializing in helping brands grow fast. Engage your clients through compelling visuals that do most of the marketing for you.'
+    />
+
+    <Feature 
+        img='/images/mobile/image-stand-out.jpg'
+        alt='Graphic image'
+        heading='Stand out to the right audience' 
+        text='Using a collaborative formula of designers, researchers, photographers, videographers, and copywriters, we’ll build and extend your brand in digital places.'
+    />
 </section>
-
-<style>
-    section {
-        min-height: 100dvh;
-        display: grid;
-        grid-template-rows: 40dvh 60dvh;
-    }
-
-    section img {
-        width: 100%;
-        height: 100%;
-        object-fit: cover;
-    }
-
-    .features {
-        background-color: var(--White);
-        text-align: center;
-        padding: 3.5rem 2rem;
-    }
-    .features h2 {
-        font-family: var(--fraunces);
-        font-size: 2rem;
-        font-weight: 900;
-    }
-    .features p {
-        margin: 1.75rem 0;
-        font-family: var(--barlow);
-        color: var(--Dark-grayish-blue);
-        font-size: 1.1rem;
-        line-height: 1.5;
-    }
-
-    .btn {
-        font-size: 1.25rem;
-        font-weight: 900;
-        font-family: var(--fraunces);
-        text-decoration: none;
-        color: inherit;
-    }
-</style>

@@ -1,18 +1,20 @@
 ---
-import navData from '../data/navData';
+// import navData from '../data/navData';
+import Nav from './Nav.astro';
 ---
 
 <header>
     <div class="navbar">
         <img src="/images/logo.svg" alt="Company Logo">
     
-        <nav>
+        <Nav />
+        <!-- <nav>
             <ul>
                 {navData.map(link => (
                     <li><a href={link.path}>{link.name}</a></li>
                 ))}
             </ul>
-        </nav>
+        </nav> -->
     </div>
 
     <h1>We are creatives</h1>
@@ -34,13 +36,10 @@ import navData from '../data/navData';
         justify-content: space-between;
     }
 
-    nav ul {
+    /* nav ul {
         list-style: none;
         display: flex;
         font-family: var(--barlow);
-    }
-    /* nav li {
-        margin-left: 1rem;
     } */
 
     h1 {
