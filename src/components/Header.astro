@@ -8,6 +8,10 @@ import Nav from './Nav.astro';
         <img src="/images/logo.svg" alt="Company Logo">
     
         <Nav />
+
+        <a class="menu-btn" data-menu-btn>
+            <img src="/images/icon-hamburger.svg" alt="Menu button icon">
+        </a>
     </div>
 
     <h1>We are creatives</h1>
@@ -63,5 +67,18 @@ import Nav from './Nav.astro';
             display: block;
             margin: 6rem auto;
         }
+
+        .menu-btn {
+            display: none;
+        }
     }
 </style>
+
+<script>
+    const menuBtn = document.querySelector('[data-menu-btn');
+    const navLinks = document.querySelector('nav ul');
+
+    menuBtn.addEventListener('click', () => {
+        navLinks.classList.toggle('open');
+    })
+</script>

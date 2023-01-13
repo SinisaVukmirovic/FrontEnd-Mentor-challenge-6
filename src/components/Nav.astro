@@ -3,6 +3,7 @@ import navData from '../data/navData';
 ---
 
 <nav>
+    <div class="menu-triangle"></div>
     <ul>
         {navData.map(link => (
             <li><a href={link.path}>{link.name}</a></li>
@@ -11,18 +12,84 @@ import navData from '../data/navData';
 </nav>
 
 <style>
+    /* nav {
+        position: relative;
+    } */
 
     nav ul {
         list-style: none;
-        display: flex;
-        align-items: center;
+        /* display: flex; */
+        /* align-items: center; */
         font-family: var(--barlow);
-    }
+
+        position: absolute;
+        top: 6rem;
+        right: 7.5%;
+        width: 85%;
+        background-color: var(--White);
+        color: var(--Dark-grayish-blue);
+        padding: 1rem;
+        /* transform: translateX(-100%); */
+        /* text-align: center; */
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        scale: 1 0;
+        transform-origin: top;
+        transition: scale 200ms ease-in-out;
+    }   
+        nav ul.open {
+            scale: 1 1;
+        }
+        /* triangle arrow */
+        nav ul.open:before {
+            content: '';
+            position: absolute;
+            top: -2rem;
+            right: 0;
+            width: 0;
+            height: 0;
+            border-style: solid;
+            border-width: 0 0 2rem 2rem;
+            border-color: transparent transparent var(--White) transparent;
+        }
+
+        /* .menu-triangle {
+
+        } */
+
+        nav ul li {
+            padding: 1.5rem;
+        }
+
+        nav ul li:last-child {
+            background-color: var(--Yellow);
+            margin: .75rem;
+            padding: .75rem 1.75rem;
+            border-radius: 10rem;
+            color: var(--Very-dark-desaturated-blue);
+            text-transform: uppercase;
+            font-size: .8rem;
+            font-family: var(--fraunces);
+        }
+            nav ul li:last-child:hover {
+                color: var(--White);
+                background-color: rgba(255, 255, 255, .4);
+            }
 
     @media (min-width: 1440px) {
+        nav ul {
+            all: unset;
+            display: flex;
+            align-items: center;
+            list-style-type: none;
+            font-family: var(--barlow);
+        }
+
         nav ul li {
             margin-left: 3rem;
             color: var(--White);
+            padding: unset;
         }
 
         nav ul li:last-child {
@@ -33,6 +100,7 @@ import navData from '../data/navData';
             text-transform: uppercase;
             font-size: .8rem;
             font-family: var(--fraunces);
+            margin-left: 2rem;
         }
             nav ul li:last-child:hover {
                 color: var(--White);
