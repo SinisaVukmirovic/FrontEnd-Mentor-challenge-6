@@ -17,7 +17,7 @@ import MainLayout from '../layouts/MainLayout.astro';
                 <br>
                  to your cone!</h2>
             <p>Use Astro SSG!</p>
-            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Itaque numquam dicta magni repellendus.</p>
+            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit.</p>
         </div>
     </div>
 
@@ -38,8 +38,10 @@ import MainLayout from '../layouts/MainLayout.astro';
             
             /* !!! made a mistake in planing out, so i can't reuse header, have to resort to this */
             position: absolute;
-            top: 6rem;
-            height: 38rem;
+            top: 4rem;
+            /* height: 38rem; */
+            /* height: 100vh; */
+            height: calc(100vh - 4rem);
         }
 
         .text {
@@ -79,7 +81,8 @@ import MainLayout from '../layouts/MainLayout.astro';
             /* !!! made a mistake in planing out, so i can't reuse header, have to resort to this */
             position: absolute;
             top: 6rem;
-            height: 42rem;
+            /* height: 42rem; */
+            height: calc(100vh - 6rem);
         }
         .text {
             padding: 5rem;

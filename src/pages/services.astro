@@ -40,8 +40,10 @@ import MainLayout from '../layouts/MainLayout.astro';
             
             /* !!! made a mistake in planing out, so i can't reuse header, have to resort to this */
             position: absolute;
-            top: 6rem;
-            height: 38rem;
+            top: 4rem;
+            /* height: 38rem; */
+            /* height: 100vh; */
+            height: calc(100vh - 4rem);
         }
 
         .text {
@@ -74,7 +76,7 @@ import MainLayout from '../layouts/MainLayout.astro';
             font-family: var(--fraunces);
             /* line-height: 1.5; */
             display: grid;
-            grid-template-columns: 1fr 2fr;
+            grid-template-columns: 2fr 1fr;
             padding: 6rem;
             /* background-color: var(--White); */
             /* background-image: linear-gradient(to top, var(--bot-blue), var(--top-blue)); */
@@ -83,16 +85,19 @@ import MainLayout from '../layouts/MainLayout.astro';
             /* !!! made a mistake in planing out, so i can't reuse header, have to resort to this */
             position: absolute;
             top: 6rem;
-            height: 42rem;
+            /* height: 42rem; */
+            height: calc(100vh - 6rem);
         }
         .text {
+            order: unset;
+            text-align: right;
             padding: 5rem;
             color: var(--Very-dark-grayish-blue);
         }
         
         h1 {
             font-size: 1.5rem;
-            margin-left: 3rem;
+            margin-right: 3rem;
             margin-bottom: 1rem;
         }
     
