@@ -1,0 +1,109 @@
+---
+import MainLayout from '../layouts/MainLayout.astro';
+---
+
+<MainLayout title='About'>
+
+    <div class="about">
+        <div class="img">
+            <picture>
+                <source srcset="/images/desktop/image-gallery-cone.jpg" media="(min-width: 1440px)">
+                <img src="/images/mobile/image-gallery-cone.jpg" alt="Graphics image">
+            </picture>
+        </div>
+        <div class="text">
+            <h1>About</h1>
+            <h2>Add <span>ice cream</span>
+                <br>
+                 to your cone!</h2>
+            <p>Use Astro SSG!</p>
+            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Itaque numquam dicta magni repellendus.</p>
+        </div>
+    </div>
+
+</MainLayout>
+
+<style>
+    img {
+        width: 100%;
+    }
+
+    .about {
+            font-family: var(--fraunces);
+            /* line-height: 1.5; */
+            display: grid;
+            grid-template-columns: 1fr;
+            padding: 1rem;
+            background-color: var(--White);            
+            
+            /* !!! made a mistake in planing out, so i can't reuse header, have to resort to this */
+            position: absolute;
+            top: 6rem;
+            height: 38rem;
+        }
+
+        .text {
+            padding: 1rem;
+            color: var(--Very-dark-grayish-blue);
+        }
+        
+        h1 {
+            font-size: 1rem;
+            margin-left: 1rem;
+        }
+    
+        h2 {
+            margin-bottom: 1rem;
+            font-size: 1.5rem;
+        }
+            h2 span {
+                color: var(--blue);
+                font-size: 3rem;
+                font-weight: 900;
+            }
+            
+            p {
+                line-height: 1.25;
+            }
+
+    @media (min-width: 1440px) {
+        .about {
+            /* font-family: var(--fraunces); */
+            /* line-height: 1.5; */
+            /* display: grid; */
+            grid-template-columns: 1fr 2fr;
+            padding: 6rem;
+            /* background-color: var(--White); */
+            /* background-image: linear-gradient(to top, var(--bot-blue), var(--top-blue)); */
+            
+            /* !!! made a mistake in planing out, so i can't reuse header, have to resort to this */
+            position: absolute;
+            top: 6rem;
+            height: 42rem;
+        }
+        .text {
+            padding: 5rem;
+            color: var(--Very-dark-grayish-blue);
+        }
+        
+        h1 {
+            font-size: 1.5rem;
+            margin-left: 3rem;
+            margin-bottom: 1rem;
+        }
+    
+        h2 {
+            margin-bottom: 2rem;
+            font-size: 2.5rem;
+        }
+            h2 span {
+                /* color: var(--blue); */
+                font-size: 5rem;
+                /* font-weight: 900; */
+            }
+            
+            p {
+                line-height: 1.5;
+            }
+    }
+</style>

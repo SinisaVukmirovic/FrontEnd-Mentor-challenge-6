@@ -23,6 +23,7 @@ import navData from '../data/navData';
         font-family: var(--barlow);
 
         position: absolute;
+        z-index: 3;
         top: 6rem;
         right: 7.5%;
         width: 85%;
@@ -76,6 +77,12 @@ import navData from '../data/navData';
                 color: var(--White);
                 background-color: rgba(255, 255, 255, .4);
             }
+        
+        nav ul a {
+            text-decoration: none;
+            color: inherit;
+        }
+
 
     @media (min-width: 1440px) {
         nav ul {

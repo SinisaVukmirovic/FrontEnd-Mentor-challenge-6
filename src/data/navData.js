@@ -1,19 +1,19 @@
 const navData = [
     {
         name: 'About',
-        href: '/about/'
+        path: '/about/'
     },
     {
         name: 'Services',
-        href: '/services/'
+        path: '/services/'
     },
     {
         name: 'Projects',
-        href: '/projects/'
+        path: '/projects/'
     },
     {
         name: 'Contact',
-        href: '/contact/'
+        path: '/contact/'
     }
 ];
 
