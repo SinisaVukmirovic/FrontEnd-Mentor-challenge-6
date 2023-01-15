@@ -3,17 +3,12 @@ import galleryImages from '../data/galleryImages';
 ---
 
 <section>
-    <!-- {galleryImages.map(img => (
-        <img src={img} alt="Gallery Picture">
-    ))} -->
-
     {galleryImages.map(img => (
         <picture>
             <source srcset={img.desk} media="(min-width: 1440px)">
             <img src={img.mob} alt="Gallery picture">
         </picture>
-    ))}
-    
+    ))}    
 </section>
 
 <style>
